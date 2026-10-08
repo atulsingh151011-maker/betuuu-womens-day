@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Women's Day - Betuuu</title>
+    <style>
+      :root {
+        --bg-1: #2a0b2f;
+        --bg-2: #4f1d4d;
+        --rose: #ffb5d5;
+        --pink: #ffd7ea;
+        --white: #fffafc;
+        --gold: #f9d56e;
+        --shadow: rgba(17, 7, 17, 0.35);
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg-1), var(--bg-2) 48%, #1e0d1f);
+        color: var(--white);
+      }
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px 18px;
+      }
+
+      .page {
+        position: relative;
+        width: min(820px, 92vw);
+        padding: 40px 28px 32px;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 25px 60px var(--shadow);
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .print-btn {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: none;
+        background: linear-gradient(135deg, #ff8ec6, #ff5da8);
+        color: white;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        box-shadow: 0 10px 25px rgba(255, 96, 160, 0.4);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        line-height: 0.96;
+        letter-spacing: 0.04em;
+        font-weight: 700;
+      }
+
+      h1 .name {
+        display: inline-block;
+        color: #ffd9ed;
+        text-shadow: 0 0 20px rgba(255, 214, 235, 0.7);
+      }
+
+      .heart {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        margin: 24px auto 18px;
+        background: linear-gradient(135deg, #ff7ab5, #ff4d8d);
+        transform: rotate(-45deg);
+        border-radius: 20px 0 0 0;
+        box-shadow: 0 0 28px rgba(255, 100, 170, 0.6);
+        animation: pulse 1.8s ease-in-out infinite;
+      }
+
+      .heart::before, .heart::after {
+        content: "";
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        background: inherit;
+        border-radius: 50%;
+      }
+
+      .heart::before { top: -52px; left: 0; }
+      .heart::after { left: 52px; top: 0; }
+
+      p {
+        max-width: 620px;
+        margin: 0 auto;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        line-height: 1.9;
+        color: rgba(255, 250, 252, 0.9);
+      }
+
+      p + p { margin-top: 18px; }
+
+      .sign {
+        margin-top: 26px;
+        font-size: 0.9rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #ffe5f3;
+      }
+
+      .footer {
+        margin-top: 10px;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: rotate(-45deg) scale(1); }
+        35% { transform: rotate(-45deg) scale(1.08); }
+        70% { transform: rotate(-45deg) scale(0.96); }
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 100vh;
+          margin: 0;
+          border-radius: 0;
+          background: white;
+          color: #2a0b2f;
+          box-shadow: none;
+          border: none;
+        }
+
+        .print-btn {
+          display: none !important;
+        }
+
+        p, .sign, .footer {
+          color: #2a0b2f !important;
+        }
+
+        .heart {
+          box-shadow: none;
+          background: #ff4d8d;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <button class="print-btn" onclick="window.print()">Save as PDF</button>
+
+      <h1>
+        Happy Women's Day,<br />
+        <span class="name">Betuuu</span>
+      </h1>
+
+      <div class="heart" aria-label="heart"></div>
+
+      <p>
+        To the most beautiful, kind, and fearless woman in my life — <strong>Betuuu</strong>
+        — you are my peace, my joy, and my greatest inspiration. Your smile can brighten even
+        the darkest days, and your love makes every moment feel magical.
+      </p>
+
+      <p>
+        Thank you for being the incredible woman you are. May your dreams be bold, your heart stay
+        gentle, and your life be filled with love, laughter, and endless happiness.
+      </p>
+
+      <div class="sign">Always yours</div>
+      <div class="footer">With all my love ❤️</div>
+    </div>
+  </body>
+</html>
